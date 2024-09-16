@@ -10,11 +10,17 @@ jobs:
           - name: Action - Checkout
             uses: actions/checkout@v4
 
-          - name: Welcome Message
-            run: echo "Welcome to my first workflow!"
+          - name: List and Read File
+            run: |
+              echo "Welcome to my first workflow!"
+              ls -ltra
+              cat README.md
 
-          - name: List of Files
-            run: ls
+          - name: Generate ASCII Work
+            run: cowsay -f dragon "Run for cows, I am a DRAGON...RAWR" >> dragon.txt
 
-          - name: View File Content
-            run: cat README.md
+        #   - name: List of Files
+        #     run: ls
+
+        #   - name: View File Content
+        #     run: cat README.md
