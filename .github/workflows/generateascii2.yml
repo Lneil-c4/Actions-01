@@ -1,0 +1,36 @@
+name: Multi Stage Job Workflow
+on: push
+
+jobs: 
+    deploy_job1: 
+        runs-on: ubuntu-latest
+
+        steps:
+          - name: Install Cowsay Program
+            run: sudo apt-get install cowsay -y
+
+          - name: Execute Cowsay CMD
+            run: cowsay -f dragon "Run for cover, I am a DRAGON...RAWR" >> dragon.txt
+
+          - name: Sleep for 10 seconds
+            run: sleep 10
+    
+    test_job2:
+        runs-on: ubuntu-latest
+
+        steps: 
+          - name: Test the dragon file.
+            run: grep -i "dragon" dragon.txt
+
+          - name: Sleep for 10 seconds
+            run: sleep 10
+
+    deploy_job3:
+        runs-on: ubuntu-latest
+        
+        steps:
+          - name: Deploy the file and check it's content
+            run: cat dragon.txt
+
+
+
