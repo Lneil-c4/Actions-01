@@ -12,7 +12,7 @@ jobs:
 
           - name: List Files
             run: ls -ltra
-            
+
           - name: ASCII Cowsay Program
             uses: ./generateascii.sh
         #   - name: Install Cowsay Program
