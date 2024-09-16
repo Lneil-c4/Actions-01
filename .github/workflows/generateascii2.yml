@@ -16,6 +16,7 @@ jobs:
             run: sleep 10
     
     test_job2:
+        needs: deploy_job1
         runs-on: ubuntu-latest
 
         steps: 
@@ -26,6 +27,7 @@ jobs:
             run: sleep 10
 
     deploy_job3:
+        needs: test_job2
         runs-on: ubuntu-latest
         
         steps:
