@@ -16,7 +16,7 @@ jobs:
               pwd
 
           - name: ASCII Cowsay Program
-            run: ./generateascii.sh
+            run: .github/workflows/generateascii.sh
         #   - name: Install Cowsay Program
         #     run: sudo apt-get install cowsay -y
             
