@@ -14,7 +14,7 @@ jobs:
             run: |
               ls -ltra
               pwd
-              chmod -x .github/workflows/generateascii.sh
+              chmod -x generateascii.sh
 
           - name: ASCII Cowsay Program
             run: .github/workflows/generateascii.sh
