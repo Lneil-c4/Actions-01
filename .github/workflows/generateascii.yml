@@ -20,7 +20,9 @@ jobs:
               ls -ltra
               
           - name: ASCII Cowsay Program
-            run: ./generateascii.sh
+            run: |
+              ls -ltra
+              ./generateascii.sh
         #   - name: Install Cowsay Program
         #     run: sudo apt-get install cowsay -y
             
