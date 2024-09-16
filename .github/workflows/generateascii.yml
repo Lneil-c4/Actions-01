@@ -15,10 +15,10 @@ jobs:
               ls -ltra
               pwd
               cd ./.github/workflows
-              chmod -x generateascii.sh
+              chmod +x generateascii.sh
               
           - name: ASCII Cowsay Program
-            run: .github/workflows/generateascii.sh
+            run: ./generateascii.sh
         #   - name: Install Cowsay Program
         #     run: sudo apt-get install cowsay -y
             
